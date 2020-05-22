@@ -1,7 +1,7 @@
-Calculation of additional volatility measures for avocado price and volume data
+Calculation of additional avocado price volatility measures
 
 (https://www.kaggle.com/neuromusic/avocado-prices)
 
-for illustrated report in Tableau 
+for illustrated Business Intelligence report in Tableau 
 
 (https://www.dropbox.com/s/zbn6ox1knwmnyry/Avocado%20Price%20Volume%20Analysis.pdf?dl=0).
