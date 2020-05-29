@@ -4,12 +4,11 @@ import pandas as pd
 
 '''Import and format
 
-Format Date as datetime values, group by region and type,
+import from csv, group by region and type,
 return dict with group keys and AveragePrice series sorted by date. 
 '''
-avocado_table = os.getcwd() + "\\avocado.csv"
+avocado_table = r"C:\Users\starch\Dropbox\Job applications\Python applications\tableau project\avocado.csv"
 df = pd.read_csv(avocado_table)
-df.assign(Date=pd.to_datetime(df['Date']))
 grouped_price = {
     key: table.sort_values('Date')['AveragePrice']
     for key, table in df.groupby(['region', 'type'])
@@ -37,7 +36,7 @@ vol10_us = {
     for key, us_price in vol10.items()
     if key[0]=='TotalUS'
 }
-cv10_US = {
+cv10_us = {
     key[1]: us_price.mean()
     for key, us_price in cv10.items()
     if key[0] == 'TotalUS'
