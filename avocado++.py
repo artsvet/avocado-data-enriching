@@ -9,7 +9,7 @@ return dict with group keys and AveragePrice series sorted by date.
 '''
 avocado_table = os.getcwd() + "\\avocado.csv"
 df = pd.read_csv(avocado_table)
-dated = df.assign(Date=pd.to_datetime(df['Date']))
+df.assign(Date=pd.to_datetime(df['Date']))
 grouped_price = {
     key: table.sort_values('Date')['AveragePrice']
     for key, table in df.groupby(['region', 'type'])
